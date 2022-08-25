@@ -9,4 +9,4 @@ FOR /F "tokens=*" %%a in ('git describe --tags') do SET VERSION=%%a
 mvn clean package -Dgitversion=%VERSION%
 
 set B64=TODO
-set payload="{\"project\":\"%DT_PROJECT%\",\"bom\":\"$B64\"}"
+set payload="{\"project\":\"%DT_PROJECT%\",\"bom\":\"%B64%\"}"
